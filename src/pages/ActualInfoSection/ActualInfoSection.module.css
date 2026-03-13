@@ -1,0 +1,318 @@
+/* --- Общие стили страницы --- */
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Модификаторы страницы по секциям: work | time | meetings */
+.pageWork {}
+.pageTime {}
+.pageMeetings {}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.contentWork {}
+.contentTime {}
+.contentMeetings {}
+
+.leftColumn {
+  flex-shrink: 0;
+}
+
+
+
+.rightColumnWork {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12%;
+  gap: 2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.rightColumnTime {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+}
+
+.rightColumnMeetings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+/* --- Секция: Режим работы (work) --- */
+.primaryButton {
+  width: 350px;
+}
+
+.workTextBlock {
+  background: none;
+  padding: 10px;
+  max-width: 420px;
+}
+
+/* --- Секция: Временные выставки (time) — стили как в educational-programs --- */
+.timeItemsGrid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.timeItem {
+  width: 340px;
+  height: 340px;
+  min-width: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.timeItemHeader {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.timeItemDate {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.timeWatchButton {
+  padding: 4px 8px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: #fff;
+  background: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.timeWatchButton:hover {
+  background: #333;
+}
+
+.timeWrapperItem {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: solid #000 1px;
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.timeItemImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #e0e0e0;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.timeItemTitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.25;
+  padding: 12px;
+}
+
+.timePagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.timePaginationArrow {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #000;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.timePaginationArrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.timePageCount {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* --- Секция: Мероприятия (meetings) --- */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.pageMeetings .textContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 1.3;
+  background: rgba(254, 204, 5, 25%);
+  padding: 10px;
+}
+
+.pageWork .textContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.textContent h3,
+.textContent h4 {
+
+}
+
+.textContent h3:first-child {}
+
+.textContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.textContent li {
+  padding: 0;
+  list-style: none;
+}
+
+.textContent p {}
+
+.scheduleList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.scheduleList li {
+ 
+  padding-left: 0;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modalClose {
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  line-height: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.modalClose:hover {
+  color: #000;
+}
+
+.modalBody {
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.modalBody h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.modalBody h3:first-child {
+  margin-top: 0;
+}
+
+.modalBody ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.modalBody li {
+  margin: 0.25rem 0;
+}

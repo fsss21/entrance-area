@@ -1,0 +1,278 @@
+{
+  "collections": [
+    {
+      "id": "classic-petersburg",
+      "name": "классический петербург",
+      "backgroundId": "peter",
+      "headerTitle": "Коллекция: Классический петербург",
+      "items": [
+        {
+          "id": 1,
+          "name": "Медный всадник",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Памятник Петру I («Медный всадник») — один из символов Санкт-Петербурга. Скульптура из бронзы изображает основателя города на вздыбленном коне. На постаменте надпись: «ПЕТРУ ПЕРВОМУ ЕКАТЕРИНА ВТОРАЯ ЛѢТА 1782»." },
+            { "title": "История", "content": "Открыт в 1782 году по заказу Екатерины II. Автор — Этьен Фальконе. Модель коня создана Мари-Анн Колло." },
+            { "title": "Архитектура", "content": "Гром-камень в основании постамента доставлен с берегов Финского залива. Высота монумента около 10 м." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "classic-new-era",
+      "name": "Новый век городской скульптуры",
+      "backgroundId": "new_era",
+      "headerTitle": "Коллекция: Новый век городской скульптуры",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал «Новый век городской скульптуры»",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Зал представляет скульптуру рубежа XX–XXI веков." },
+            { "title": "История", "content": "Развитие городской скульптуры в новейший период." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "time-hall",
+      "name": "Зал временных выставок",
+      "backgroundId": "time_hall",
+      "headerTitle": "Коллекция: Зал временных выставок",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал «Новый век городской скульптуры»",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Зал представляет скульптуру рубежа XX–XXI веков." },
+            { "title": "История", "content": "Развитие городской скульптуры в новейший период." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "architect-office",
+      "name": "Кабинет архитектора",
+      "backgroundId": "architect",
+      "headerTitle": "Коллекция: Кабинет архитектора",
+      "items": [
+        {
+          "id": 1,
+          "name": "Кабинет архитектора",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Мемориальный кабинет, посвящённый архитектуре усадьбы." },
+            { "title": "История", "content": "История проектирования и строительства главного дома." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "sculptor-office",
+      "name": "Кабинет скульптора",
+      "backgroundId": "sculptor",
+      "headerTitle": "Коллекция: Кабинет скульптора",
+      "items": [
+        {
+          "id": 1,
+          "name": "Кабинет скульптора",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Мемориальный кабинет скульптора, творческая мастерская." },
+            { "title": "История", "content": "История создания произведений в стенах музея." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "memorial-sculpture",
+      "name": "мемориальная скульптура",
+      "backgroundId": "hall",
+      "headerTitle": "Коллекция: Мемориальная скульптура",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал мемориальной скульптуры",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Бывшая усадьба, федеральный памятник архитектуры в Санкт-Петербурге, расположена у слияния рек Оккервиль и Охта." },
+            { "title": "История", "content": "Владельцами в XVIII веке были Марк Федорович Полторацкий и Агафоклея Александровна." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "findings-hall",
+      "name": "Зал находок",
+      "backgroundId": "findings",
+      "headerTitle": "Коллекция: Зал находок",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал находок",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Экспозиция археологических и реставрационных находок." },
+            { "title": "История", "content": "Материалы, обнаруженные при исследованиях и реставрации." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "competition-hall",
+      "name": "Конкурсный зал",
+      "backgroundId": "competition",
+      "headerTitle": "Коллекция: Конкурсный зал",
+      "items": [
+        {
+          "id": 1,
+          "name": "Конкурсный зал",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Зал для временных выставок и конкурсных проектов." },
+            { "title": "История", "content": "Проведение конкурсов и смотров скульптуры." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "makets-hall",
+      "name": "Зал с макетом усадьбы",
+      "backgroundId": "makets",
+      "headerTitle": "Коллекция: Зал с макетом усадьбы",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал с макетом усадьбы",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "В зале представлен макет усадьбы и история территории." },
+            { "title": "История", "content": "Макет воссоздаёт облик усадьбы в разные периоды." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "monumental-propaganda",
+      "name": "монументальная пропаганда",
+      "backgroundId": "propaganda",
+      "headerTitle": "Коллекция: Монументальная пропаганда",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал «Монументальная пропаганда»",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Экспозиция зала рассказывает о монументальной пропаганде в советский период." },
+            { "title": "История", "content": "Материалы о создании и судьбе памятников той эпохи." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+
+      ]
+    },
+    {
+      "id": "soviet-monuments",
+      "name": "Зал «Памятники советской эпохи»",
+      "backgroundId": "soviet_monuments",
+      "headerTitle": "Коллекция: Зал «Памятники советской эпохи»",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал «Памятники советской эпохи»",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Экспозиция памятников и моделей советского периода." },
+            { "title": "История", "content": "Судьбы монументов и их авторов." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "master-class-space",
+      "name": "Интерактивное пространство для мастер-классов",
+      "backgroundId": "master_class",
+      "headerTitle": "Коллекция: Интерактивное пространство для мастер-классов",
+      "items": [
+        {
+          "id": 1,
+          "name": "Интерактивное пространство для мастер-классов",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Пространство для проведения мастер-классов и интерактивных занятий." },
+            { "title": "История", "content": "Здесь проходят образовательные программы музея." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "conference-hall",
+      "name": "Конференц-зал",
+      "backgroundId": "conference",
+      "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+      "headerTitle": "Коллекция: Конференц-зал",
+      "items": [
+        {
+          "id": 1,
+          "name": "Конференц-зал",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Конференц-зал для мероприятий, лекций и встреч." },
+            { "title": "История", "content": "Используется для конференций и семинаров." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "memorial-board-corridor",
+      "name": "Коридор мемориальной доски",
+      "backgroundId": "coridor",
+      "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+      "headerTitle": "Коллекция: Коридор мемориальной доски",
+      "items": [
+        {
+          "id": 1,
+          "name": "Коридор мемориальной доски",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Коридор с мемориальными досками и памятными знаками." },
+            { "title": "История", "content": "История мемориальных досок в здании музея." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        }
+      ]
+    },
+    {
+      "id": "gerakl-flora",
+      "name": "геракл и флора",
+      "backgroundId": "gerackl",
+      "headerTitle": "Коллекция: Геракл и Флора",
+      "items": [
+        {
+          "id": 1,
+          "name": "Зал «Геракл и Флора»",
+          "placeholderImg": "/images/collections/classicPetersburg/petr_1_place_holder_img.png",
+          "sections": [
+            { "title": "Описание", "content": "Зал назван по скульптурной группе «Геракл и Флора»." },
+            { "title": "История", "content": "История создания и бытования произведений в интерьере." }
+          ],
+          "images": ["/images/collections/classicPetersburg/petr_1_place_holder_img.png"]
+        } 
+      ]
+    }
+  ]
+}

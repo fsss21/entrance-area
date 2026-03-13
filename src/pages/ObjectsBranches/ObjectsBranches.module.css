@@ -1,0 +1,122 @@
+.objectsBranches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 5%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #000;
+  width: 1400px;
+  min-height: 700px;
+}
+
+.title {
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+ width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.gridBtn {
+  padding: 0.75rem 1.25rem;
+  font: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 -1px -1px 0;
+  flex-shrink: 0;
+}
+
+.row .gridBtn:last-child {
+  margin-right: 0;
+}
+
+/* Размеры без изменений: ряд 1 — три кнопки вплотную, ряд 2 — три, ряд 3 — 7 и 8 вплотную */
+.gridBtn1 { width: 400px; }
+.gridBtn2 { width: 260px; }
+.gridBtn3 { width: 350px; }
+.gridBtn4 { width: 440px; }
+.gridBtn5 { width: 350px; }
+.gridBtn6 { width: 360px; }
+.gridBtn7 { width: 240px; }
+.gridBtn8 { width: 370px; }
+
+.gridBtn1:hover{
+  background: #5568C7;
+  color: #000;
+}
+.gridBtn2:hover{
+  background: #FCCD05;
+  color: #000;
+}
+.gridBtn3:hover{
+  background: #7FBBC6;
+  color: #000;
+}
+.gridBtn4:hover{
+  background: #005F5B;
+  color: #fff;
+}
+.gridBtn5:hover{
+  background: #FFFFFF;
+  color: #000;
+}
+.gridBtn6:hover{
+  background: #FFFFFF;
+  color: #000;
+}
+.gridBtn7:hover{
+  background: #5467C6;
+  color: #000;
+}
+.gridBtn8:hover{
+  background: #F04943;
+  color: #000;
+}
+
+.backWrap {
+  margin-top: 0.5rem;
+}

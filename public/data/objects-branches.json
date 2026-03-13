@@ -1,0 +1,153 @@
+{
+  "branches": [
+    {
+      "id": "lavra",
+      "name": "Александро-Невская Лавра",
+      "type": "with-buttons",
+      "backgroundId": "lavra",
+      "color": "#000",
+      "title": "Александро-Невская Лавра",
+      "buttons": ["Некрополь XVIII века", "Некрополь мастеров искусств"],
+      "sections": [
+        {
+          "name": "Некрополь XVIII века",
+          "sections": [
+            { "title": "Описание", "content": "Некрополь XVIII века — старейшее кладбище Александро-Невской лавры. Здесь погребены видные деятели эпохи Просвещения." },
+            { "title": "История", "content": "Заложен в начале XVIII века при строительстве монастыря. На территории сохранились надгробия и памятники работы известных скульпторов." }
+          ],
+          "images": ["", ""],
+          "collectionId": null
+        },
+        {
+          "name": "Некрополь мастеров искусств",
+          "sections": [
+            { "title": "Описание", "content": "Некрополь мастеров искусств — музейное кладбище, где захоронены писатели, композиторы, художники и артисты." },
+            { "title": "История", "content": "Создан в XIX веке. Среди погребённых — Ф. М. Достоевский, М. И. Глинка, И. А. Крылов и многие другие." }
+          ],
+          "images": ["", ""],
+          "collectionId": null
+        }
+      ]
+    },
+    {
+      "id": "utkina",
+      "name": "Уткина Дача",
+      "type": "with-buttons",
+      "backgroundId": "utkina",
+      "color": "#000",
+      "title": "Уткина Дача",
+      "buttons": ["История усадьбы", "Архитектурный памятник", "Современная экспозиция"],
+      "sections": [
+        {
+          "name": "История усадьбы",
+          "sections": [
+            { "title": "Описание", "content": "Уткина дача — усадебный комплекс на правом берегу реки Оккервиль. Памятник архитектуры федерального значения." },
+            { "title": "История", "content": "Усадьба известна с XVIII века. Принадлежала семье Полторацких, затем другим владельцам. С 2011 года — филиал Музея городской скульптуры." }
+          ],
+          "images": ["", ""],
+          "collectionId": null
+        },
+        {
+          "name": "Архитектурный памятник",
+          "sections": [
+            { "title": "Описание", "content": "Главное здание — двухэтажная постройка в стиле классицизма с ротондой и флигелями." },
+            { "title": "Архитектура", "content": "Ансамбль включает главный дом, парк и хозяйственные постройки. Реставрация ведётся с 2010-х годов." }
+          ],
+          "images": ["", ""],
+          "collectionId": null
+        },
+        {
+          "name": "Современная экспозиция",
+          "sections": [
+            { "title": "Описание", "content": "В залах представлены выставки, посвящённые истории усадьбы и скульптуре." },
+            { "title": "Экспозиция", "content": "Временные и постоянные экспозиции музея, образовательные программы и экскурсии." }
+          ],
+          "images": ["", ""],
+          "collectionId": null
+        }
+      ]
+    },
+    {
+      "id": "monuments",
+      "name": "Памятники города: интерактивная карта с объектами под охраной музея",
+      "color": "#000",
+      "type": "map",
+      "backgroundId": "interactiv_map",
+      "menuFilters": ["мемориальные доски", "памятники"],
+      "items": [
+        { "id": "m1", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "65%", "left": "22%" }, "position4k": { "top": "65%", "left": "22%" } },
+        { "id": "m2", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "35%", "left": "47.3%" }, "position4k": { "top": "35%", "left": "47.3%" } },
+        { "id": "m3", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "36%", "left": "57.3%" }, "position4k": { "top": "36%", "left": "57.3%" } },
+        { "id": "m4", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "52%", "left": "69%" }, "position4k": { "top": "52%", "left": "69%" } },
+        { "id": "m5", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "85%", "left": "51.5%" }, "position4k": { "top": "85%", "left": "51.5%" } },
+        { "id": "m6", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "68%", "left": "68%" }, "position4k": { "top": "68%", "left": "68%" } },
+        { "id": "m7", "name": "мемориальные доски", "image": "/images/interactiveMap/memorial_map_img.png", "position": { "top": "64%", "left": "64%" }, "position4k": { "top": "64%", "left": "64%" } },
+        { "id": "p1", "name": "Памятник В.И. Ленину на броневике", "image": "/images/interactiveMap/lenin_map_img.png", "position": { "top": "42%", "left": "54.3%" }, "position4k": { "top": "42%", "left": "54.3%" } },
+        { "id": "p2", "name": "Смольный институт", "image": "/images/interactiveMap/institute_map_img.png", "position": { "top": "56%", "left": "69%" }, "position4k": { "top": "56%", "left": "69%" } },
+        { "id": "p3", "name": "Памятник А.Д. Сахарову", "image": "/images/interactiveMap/saharov_map_img.png", "position": { "top": "59%", "left": "34%" }, "position4k": { "top": "59%", "left": "34%" } },
+        { "id": "p4", "name": "Памятник М.В. Ломоносову", "image": "/images/interactiveMap/lomonosov_map_img.png", "position": { "top": "63%", "left": "36%" }, "position4k": { "top": "63%", "left": "36%" } },
+        { "id": "p5", "name": "Александровский сад", "image": "/images/interactiveMap/garden_map_img.png", "position": { "top": "72%", "left": "36%" }, "position4k": { "top": "72%", "left": "36%" } },
+        { "id": "p6", "name": "Чижик-Пыжик", "image": "/images/interactiveMap/chizik_map_img.png", "position": { "top": "63%", "left": "47.5%" }, "position4k": { "top": "63%", "left": "47.5%" } },
+        { "id": "p7", "name": "Памятник А.А. Ахматовой", "image": "/images/interactiveMap/ahmatov_map_img.png", "position": { "top": "72%", "left": "50.5%" }, "position4k": { "top": "72%", "left": "50.5%" } },
+        { "id": "p8", "name": "Памятник А.С. Пушкину", "image": "/images/interactiveMap/pushin_map_img.png", "position": { "top": "69%", "left": "45%" }, "position4k": { "top": "69%", "left": "45%" } }
+      ]
+    },
+    {
+      "id": "restoration",
+      "name": "Реставрационные мастерские",
+      "type": "simple",
+      "backgroundId": "restoration",
+      "sections": [
+        { "title": "Описание", "content": "Реставрационные мастерские Музея городской скульптуры занимаются сохранением и восстановлением памятников и скульптуры." },
+        { "title": "История", "content": "Мастерские оснащены современным оборудованием для работы с камнем, металлом и другими материалами." }
+      ],
+      "images": ["", ""]
+    },
+    {
+      "id": "literatorskie",
+      "name": "Литераторские мостки",
+      "type": "simple",
+      "backgroundId": "literatorskie",
+      "color": "#000",
+      "sections": [
+        { "title": "Описание", "content": "Литераторские мостки — музейный некрополь на Волковском кладбище, где похоронены писатели, критики и общественные деятели." },
+        { "title": "История", "content": "Название связано с захоронением Н. А. Добролюбова. Здесь покоятся И. С. Тургенев, М. Е. Салтыков-Щедрин и другие." }
+      ],
+      "images": ["", ""]
+    },
+    {
+      "id": "volkovo",
+      "name": "Волковское кладбище",
+      "type": "simple",
+      "backgroundId": "volkovo",
+      "sections": [
+        { "title": "Описание", "content": "Волковское кладбище — одно из старейших кладбищ Санкт-Петербурга. На его территории расположены Литераторские мостки и другие памятные зоны." },
+        { "title": "История", "content": "Основано в XVIII веке. Имеет статус музея под открытым небом." }
+      ],
+      "images": ["", ""]
+    },
+    {
+      "id": "nevsky19",
+      "name": "Невский, 19",
+      "type": "simple",
+      "backgroundId": "nevsky19",
+      "sections": [
+        { "title": "Описание", "content": "Выставочный и мемориальный объект Музея городской скульптуры по адресу Невский проспект, 19." },
+        { "title": "История", "content": "Здание связано с историей города и музея. Используется для выставок и мероприятий." }
+      ],
+      "images": ["", ""]
+    },
+    {
+      "id": "anikushin",
+      "name": "Мастерская Аникушина",
+      "type": "simple",
+      "backgroundId": "anikushin",
+      "color": "#000",
+      "sections": [
+        { "title": "Описание", "content": "Музей-мастерская скульптора М. К. Аникушина — мемориальное пространство, где представлены работы мастера и история его творчества." },
+        { "title": "История", "content": "М. К. Аникушин — автор памятника А. С. Пушкину на площади Искусств и других известных монументов." }
+      ],
+      "images": ["", ""]
+    }
+  ]
+}

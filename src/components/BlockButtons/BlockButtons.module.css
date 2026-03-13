@@ -1,0 +1,62 @@
+.blockButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 750px;
+  border-right: solid #464545 2px;
+  padding: 12px;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1a1a2e;
+  
+}
+
+.buttonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.itemButton {
+  padding: 8px;
+  width: 320px;
+  font: inherit;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: #000000;
+  background: none;
+  border: none;
+  border-top: 3px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  font-size: 18px;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+
+.itemButton:hover {
+  color: #000;
+  border-top-color: #000;
+  font-weight: bold;
+}
+
+.itemButtonActive {
+  color: #000;
+  border-top-color: #000;
+  font-weight: 700;
+}
+
+.backWrap {
+  margin-top: 1rem;
+}

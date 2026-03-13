@@ -1,0 +1,69 @@
+.actualInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1580px;
+  z-index: 1;
+  padding-top: 60px;
+}
+
+.containerWork{
+  background: none;
+  width: 486px;
+  height: 683px;
+  cursor: pointer;
+}
+
+.containerTime{
+  background: none;
+  width: 486px;
+  height: 683px;
+  cursor: pointer;
+}
+
+.containerMeetings{
+  background: none;
+  width: 486px;
+  height: 683px;
+  cursor: pointer;
+}
+
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  background: #000;
+  width: 100%;
+  height: 30px;
+}
+
+
+.backWrap {
+  position: absolute;
+  left: 2%;
+  bottom: 5%;
+  margin-top: 0.5rem;
+}
