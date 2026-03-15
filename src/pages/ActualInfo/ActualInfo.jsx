@@ -17,7 +17,7 @@ const ActualInfo = () => {
         setImageSrc(is4K ? backgroundActualImg4k : backgroundActualImg)
     }, [])
 
-    const handleBack = () => navigate('/menu-map')
+    const handleBack = () => navigate('/')
     const handleWork = () => navigate('/actual-info/work')
     const handleTime = () => navigate('/actual-info/time')
     const handleMeetings = () => navigate('/actual-info/meetings')

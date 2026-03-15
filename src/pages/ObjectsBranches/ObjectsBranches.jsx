@@ -27,7 +27,7 @@ const ObjectsBranches = () => {
         setImageSrc(is4K ? backgroundImg4k : backgroundImg)
     }, [])
 
-    const handleBack = () => navigate('/menu-map')
+    const handleBack = () => navigate('/')
 
     const handleBranchClick = (index, branch) => {
         setSelectedIndex(index)
