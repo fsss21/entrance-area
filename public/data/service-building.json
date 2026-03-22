@@ -27,7 +27,11 @@
             "content": "Основное здание — круглая ротонда с куполом, вспомогательные постройки — оранжереи, конюшни, двухэтажный служебный корпус, пейзажный парк с фонтаном."
           }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/images/1_triskorni_tairova.jpg",
+          "/images/4_martos_kurakina_elena.jpg",
+          "/images/5_kurakina_skorbjashhij_genij.jpg"
+        ]
       },
       {
         "name": "Классический Петербург",
@@ -38,7 +42,11 @@
           { "title": "История", "content": "Экспозиция отражает развитие монументального искусства города." },
           { "title": "Архитектура", "content": "Зал оформлен в классическом стиле." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_medny_vsadnik.jpg",
+          "/data/images/4_aleksandrovskaya_kolonna.jpg",
+          "/data/images/8_kon_anichkov_ukrotitel.jpg"
+        ]
       },
       {
         "name": "Зал «Монументальная пропаганда»",
@@ -49,7 +57,11 @@
           { "title": "История", "content": "Материалы о создании и судьбе памятников той эпохи." },
           { "title": "Архитектура", "content": "Пространство зала приспособлено под тематическую экспозицию." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_lassal.jpg",
+          "/data/images/3_volodarsk.jpg",
+          "/data/images/4_lenin_finland.jpg"
+        ]
       },
       {
         "name": "Зал «Геракл и Флора»",
@@ -60,7 +72,11 @@
           { "title": "История", "content": "История создания и бытования произведений в интерьере." },
           { "title": "Архитектура", "content": "Особенности размещения скульптуры в зале." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_gerakl.jpg",
+          "/data/images/3_gerakl.jpg",
+          "/data/images/1_flora.jpg"
+        ]
       }
     ]
   },
@@ -83,7 +99,11 @@
           { "title": "История", "content": "Развитие городской скульптуры в новейший период." },
           { "title": "Архитектура", "content": "Современное экспозиционное решение." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_Gabriadze_Chizhik-Pyzhik_1994_Bronza.jpg",
+          "/data/images/5_Lazarev_Model_Saharov_2001_Gips.jpg",
+          "/data/images/8_Simun_Petr_I_2011_Bronza.jpg"
+        ]
       },
       {
         "name": "Конкурсный зал",
@@ -94,7 +114,11 @@
           { "title": "История", "content": "Проведение конкурсов и смотров скульптуры." },
           { "title": "Архитектура", "content": "Многофункциональное выставочное пространство." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_gabe_dinamichnyi.jpg",
+          "/data/images/4_rybalko_byust.jpg",
+          "/data/images/7_sveshnikov_petrov.jpg"
+        ]
       },
       {
         "name": "Зал «Памятники советской эпохи»",
@@ -105,7 +129,11 @@
           { "title": "История", "content": "Судьбы монументов и их авторов." },
           { "title": "Архитектура", "content": "Оформление зала и принципы экспонирования." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/1_griboedov.jpeg",
+          "/data/images/4_chernyshevskiy.JPG",
+          "/data/images/6_rodina_mat.jpg"
+        ]
       },
       {
         "name": "Коридор мемориальной доски",
@@ -116,7 +144,11 @@
           { "title": "История", "content": "История мемориальных досок в здании музея." },
           { "title": "Архитектура", "content": "Размещение досок в пространстве коридора." }
         ],
-        "images": ["", "", ""]
+        "images": [
+          "/data/images/001_326.jpg",
+          "/data/images/004_63.JPG",
+          "/data/images/007_291.jpg"
+        ]
       }
     ]
   }

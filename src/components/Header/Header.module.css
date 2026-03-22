@@ -10,7 +10,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
-  z-index: 1000;
+  z-index: 5;
 }
 
 /* Хедер на страницах /actual-info/work, /actual-info/time, /actual-info/meetings */

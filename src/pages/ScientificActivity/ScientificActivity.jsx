@@ -75,7 +75,13 @@ const ScientificActivity = () => {
                       <span className={styles.itemDayWeek}>{item.dayOfWeek},</span>
                       <span className={styles.itemTime}>{item.time}</span>
                     </div>
-                    <div className={styles.itemImage} />
+                    <div className={styles.itemImageWrap}>
+                      {item.image ? (
+                        <img src={item.image} alt="" className={styles.itemImage} />
+                      ) : (
+                        <div className={styles.itemImagePlaceholder} aria-hidden />
+                      )}
+                    </div>
                     <h3 className={styles.itemTitle}>{item.title}</h3>
                   </article>
                 ))}
@@ -91,7 +97,11 @@ const ScientificActivity = () => {
                       </button>
                     </div>
                     <div className={styles.programWrapperItem}>
-                      <div className={styles.programItemImage} />
+                      {item.image ? (
+                        <img src={item.image} alt="" className={styles.programItemImage} />
+                      ) : (
+                        <div className={styles.programItemImagePlaceholder} aria-hidden />
+                      )}
                       <h3 className={styles.programItemTitle}>{item.title}</h3>
                     </div>
                   </article>

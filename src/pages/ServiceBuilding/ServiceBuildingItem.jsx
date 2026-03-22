@@ -76,6 +76,16 @@ const ServiceBuildingItem = () => {
     }
   }, [data, floorNum, hallIdx, location.pathname, location.state?.pageTitle, navigate])
 
+  useEffect(() => {
+    if (!data) return
+    const floorKey = floorNum === 1 ? 'floor1' : 'floor2'
+    const floorData = data[floorKey]
+    const h = floorData?.halls?.[hallIdx]
+    if (!floorData || !h) {
+      navigate('/service-building', { replace: true })
+    }
+  }, [data, floorNum, hallIdx, navigate])
+
   if (!data) {
     return (
       <div className={styles.page}>
@@ -93,7 +103,6 @@ const ServiceBuildingItem = () => {
   const hall = floorData?.halls?.[hallIdx]
 
   if (!floorData || !hall) {
-    navigate('/service-building')
     return null
   }
 

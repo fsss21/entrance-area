@@ -120,11 +120,27 @@ const CollectionItems = () => {
     loadData('collection.json').then(setData)
   }, [])
 
+  useEffect(() => {
+    if (!items.length) return
+    const saved = location.state?.collectionItemSlideIndex
+    if (typeof saved !== 'number' || Number.isNaN(saved)) return
+    setSlideIndex(Math.max(0, Math.min(Math.floor(saved), items.length - 1)))
+  }, [items.length, location.state?.collectionItemSlideIndex, collectionIndex])
+
+  useEffect(() => {
+    if (!data) return
+    if (!isValidIndex || !activeCollection) {
+      navigate('/collection', { replace: true })
+    }
+  }, [data, isValidIndex, activeCollection, navigate])
+
   const handleBack = () => {
     if (location.state?.returnTo) {
       navigate(location.state.returnTo, { state: location.state.returnState ?? undefined })
     } else {
-      navigate('/collection', { state: null })
+      navigate('/collection', {
+        state: { carouselSlideIndex: collectionIndex },
+      })
     }
   }
 
@@ -155,7 +171,6 @@ const CollectionItems = () => {
   }
 
   if (!isValidIndex || !activeCollection) {
-    navigate('/collection', { replace: true })
     return null
   }
 

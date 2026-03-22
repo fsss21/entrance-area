@@ -8,6 +8,44 @@ const os = require('os');
  * Музейная экспозиция: главный дом, служебный корпус, коллекции, объекты и филиалы.
  * React + Vite, статика в build/, данные в public/data/
  */
+/** MIME для раздачи файлов из public/data/images и public/images (без зависимости mime-types) */
+function guessImageMime(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  const map = {
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.webp': 'image/webp',
+    '.gif': 'image/gif',
+    '.svg': 'image/svg+xml',
+    '.bmp': 'image/bmp',
+    '.ico': 'image/x-icon',
+  };
+  return map[ext] || 'application/octet-stream';
+}
+
+/**
+ * Если файла нет ни в build/public, ни в соседних проектах — отдаём SVG,
+ * чтобы в карусели коллекций и в теге img был виден блок с подписью, а не пустое место.
+ */
+const MISSING_IMAGE_PLACEHOLDER_SVG = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#e8e8e8" width="100%" height="100%"/>
+  <text x="400" y="310" text-anchor="middle" fill="#666666" font-family="system-ui,sans-serif" font-size="18">Изображение отсутствует</text>
+</svg>`;
+
+function sendMissingImagePlaceholder(req, res) {
+  const body = MISSING_IMAGE_PLACEHOLDER_SVG;
+  res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+  res.setHeader('Cache-Control', 'private, no-cache');
+  if (req.method === 'HEAD') {
+    res.setHeader('Content-Length', Buffer.byteLength(body, 'utf8'));
+    res.end();
+    return;
+  }
+  res.end(body, 'utf8');
+}
+
 const CONFIG = {
   // Порт сервера (не конфликтует с Vite dev 5173/5174)
   port: 3001,
@@ -111,10 +149,89 @@ class ServerSetup {
       this.getTinderVotesFile = this.getTinderVotesFile.bind(this);
 
       this.indexHtmlExists = false;
+      // Кэш имён подпапок в корне монорепозитория (поиск public/data/images в соседних проектах)
+      this._projectSubdirsCache = null;
     } catch (error) {
       console.error('❌ Ошибка в конструкторе ServerSetup:', error);
       throw error;
     }
+  }
+
+  /**
+   * Корень монорепозитория (родитель entrance-area), как PROJECTS_ROOT в admin-dacha/server.pkg.cjs.
+   * Изображения ищутся в {projectsRoot}/{имя-проекта}/public/data/images и .../public/images.
+   */
+  getProjectsRoot() {
+    return path.resolve(this.baseDir, '..');
+  }
+
+  _getProjectSubdirNames() {
+    if (this._projectSubdirsCache) return this._projectSubdirsCache;
+    try {
+      const entries = fs.readdirSync(this.getProjectsRoot(), { withFileTypes: true });
+      this._projectSubdirsCache = entries
+        .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
+        .map((e) => e.name);
+    } catch {
+      this._projectSubdirsCache = [];
+    }
+    return this._projectSubdirsCache;
+  }
+
+  /**
+   * Пути поиска файла относительно public: например data/images/a.jpg или images/b.jpg
+   */
+  _collectCandidatePathsForPublicAsset(normalizedRelativePath) {
+    const candidates = [];
+    candidates.push(path.join(this.buildDir, normalizedRelativePath));
+    candidates.push(path.join(this.baseDir, 'public', normalizedRelativePath));
+    const projectsRoot = this.getProjectsRoot();
+    for (const name of this._getProjectSubdirNames()) {
+      candidates.push(path.join(projectsRoot, name, 'public', normalizedRelativePath));
+    }
+    return candidates;
+  }
+
+  /**
+   * Раздача URL /data/images/… и /images/… из build, public зоны входа и из public соседних проектов.
+   * Та же схема, что при загрузке через админку: POST /api/upload → файл в project/public/data/images.
+   */
+  _attachSharedPublicAssets(app) {
+    const self = this;
+    app.use((req, res, next) => {
+      if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+      const urlPath = req.path || '';
+      if (!urlPath.startsWith('/data/images/') && !urlPath.startsWith('/images/')) return next();
+
+      let raw = urlPath.replace(/^\/+/, '');
+      try {
+        raw = decodeURIComponent(raw);
+      } catch {
+        /* оставляем raw */
+      }
+      const normalized = path.normalize(raw).replace(/^(\.\.(\/|\\|$))+/, '');
+      if (normalized.startsWith('..') || path.isAbsolute(normalized)) return next();
+
+      (async () => {
+        const candidates = self._collectCandidatePathsForPublicAsset(normalized);
+        for (const fullPath of candidates) {
+          const resolved = path.resolve(fullPath);
+          if (!(await fs.pathExists(resolved))) continue;
+          const stat = await fs.stat(resolved);
+          if (!stat.isFile()) continue;
+          res.setHeader('Content-Type', guessImageMime(resolved));
+          res.setHeader('Cache-Control', 'public, max-age=86400');
+          if (req.method === 'HEAD') {
+            res.end();
+            return;
+          }
+          return res.sendFile(resolved, (err) => {
+            if (err) next(err);
+          });
+        }
+        sendMissingImagePlaceholder(req, res);
+      })().catch(next);
+    });
   }
 
   getBaseDir() {
@@ -341,6 +458,7 @@ class ServerSetup {
     console.log(`📁 Данные: ${this.gameItemsFile}`);
     console.log(`📂 Статика: ${this.buildDir}`);
     console.log(`📂 Корень: ${this.baseDir}`);
+    console.log(`📂 Медиа /data/images и /images: поиск в ${this.getProjectsRoot()}/*/public/ (как admin-dacha)`);
     console.log(`🌐 Приложение: ${this.getAppUrl()}`);
     console.log(`🔧 Kiosk: ${this.config.kioskMode ? '✅' : '❌'}`);
     console.log(`🔒 CORS отключен в браузере: ${this.config.disableWebSecurity ? '✅ (небезопасно)' : '❌'}`);
@@ -348,6 +466,7 @@ class ServerSetup {
   }
 
   setupStaticFiles(app, express) {
+    this._attachSharedPublicAssets(app);
     app.use(express.static(this.buildDir));
     app.use((req, res, next) => {
       if (req.path.startsWith('/api')) return next();

@@ -1,16 +1,127 @@
 .wrapper {
   position: relative;
   width: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+}
+
+/* Портал в document.body — выше .content (z-index:1) и Header (z-index:5) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: min(3rem, 6vw);
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.78);
+  cursor: default;
+}
+
+.lightboxClose {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9001;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxClose:hover {
+  background: rgba(0, 0, 0, 0.65);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.lightboxBody {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: min(96vw, 1400px);
+  max-height: 100%;
+  pointer-events: auto;
+  cursor: default;
+}
+
+/* Фиксированный кадр: при смене фото разная высота/ширина не двигает вёрстку */
+.lightboxImageWrap {
+  width: min(92vw, 1400px);
+  height: min(78vh, 1200px);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.lightboxImg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.lightboxPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.lightboxArrow {
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lightboxArrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.lightboxArrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.lightboxCount {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #eee;
 }
 
 .imageContainer {
   width: 100%;
   max-width: 1200px;
   aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+  overflow: hidden;
   background: #e8e8e8;
   border: 1px solid #ddd;
   display: flex;
@@ -36,12 +147,16 @@
   margin-top: 1rem;
 }
 
-.imagePaginationButtons{
+.imagePaginationSpacer {
+  flex: 1;
+  min-width: 0;
+}
+
+.imagePaginationButtons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  
 }
 
 .imagePaginationArrow {
@@ -67,8 +182,6 @@
 }
 
 .fullscreenButton {
-
-  
   width: 44px;
   height: 44px;
   padding: 0;

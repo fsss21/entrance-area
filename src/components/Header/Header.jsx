@@ -22,14 +22,24 @@ const ROUTE_TITLES = {
 
 const ACTUAL_INFO_HEADER_ROUTES = ['/actual-info/work', '/actual-info/time', '/actual-info/meetings']
 
+/** Заголовок для вложенных путей, когда нет точного совпадения в ROUTE_TITLES */
+function getPrefixFallbackTitle(pathname) {
+  if (pathname.startsWith('/collection')) return ROUTE_TITLES['/collection']
+  if (pathname.startsWith('/objects-branches')) return ROUTE_TITLES['/objects-branches']
+  if (pathname.startsWith('/service-building')) return ROUTE_TITLES['/service-building']
+  if (pathname.startsWith('/main-house')) return ROUTE_TITLES['/main-house']
+  return ''
+}
+
 const Header = () => {
   const location = useLocation()
   const [headerBgSrc, setHeaderBgSrc] = useState(null)
 
   const title =
-    location.state?.pageTitle ??
-    ROUTE_TITLES[location.pathname] ??
-    (location.pathname.startsWith('/actual-info') ? 'актуальная информация' : '')
+    (location.state?.pageTitle ??
+      ROUTE_TITLES[location.pathname] ??
+      (location.pathname.startsWith('/actual-info') ? 'актуальная информация' : '')) ||
+    getPrefixFallbackTitle(location.pathname)
   const titleColor = location.state?.pageTitleColor
   const useActualInfoHeader = ACTUAL_INFO_HEADER_ROUTES.includes(location.pathname)
 

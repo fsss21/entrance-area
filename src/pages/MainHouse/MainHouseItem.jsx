@@ -74,6 +74,15 @@ const MainHouseItem = () => {
     }
   }, [data, hallIdx, location.pathname, location.state?.pageTitle, navigate])
 
+  useEffect(() => {
+    if (!data) return
+    const halls = data.halls ?? []
+    const h = halls[hallIdx]
+    if (!h) {
+      navigate('/main-house', { replace: true })
+    }
+  }, [data, hallIdx, navigate])
+
   if (!data) {
     return (
       <div className={styles.page}>
@@ -92,7 +101,6 @@ const MainHouseItem = () => {
   const hall = halls[hallIdx]
 
   if (!hall) {
-    navigate('/main-house')
     return null
   }
 

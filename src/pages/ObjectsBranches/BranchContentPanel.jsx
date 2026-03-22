@@ -22,7 +22,7 @@ export default function BranchContentPanel({
       <div className={styles.leftColumn}>
         <aside className={styles.leftPanel}>
           <h1 className={styles.itemTitle}>{title}</h1>
-          <div>
+          <div className={styles.sectionBody}>
             {currentSection && (
               <>
                 <h2 className={styles.sectionTitle}>{currentSection.title}</h2>
@@ -30,41 +30,43 @@ export default function BranchContentPanel({
               </>
             )}
           </div>
-          <div className={styles.textPagination}>
-            <span className={styles.textPageCount}>
-              {textPage} / {totalTextPages}
-            </span>
-            <div className={styles.textPaginationArrows}>
-              <button
-                type="button"
-                className={styles.textPaginationArrow}
-                onClick={() => setTextPage((p) => Math.max(1, p - 1))}
-                disabled={textPage <= 1}
-              >
-                ‹
-              </button>
-              <button
-                type="button"
-                className={styles.textPaginationArrow}
-                onClick={() => setTextPage((p) => Math.min(totalTextPages, p + 1))}
-                disabled={textPage >= totalTextPages}
-              >
-                ›
-              </button>
+          <div className={styles.panelFooter}>
+            <div className={styles.textPagination}>
+              <span className={styles.textPageCount}>
+                {textPage} / {totalTextPages}
+              </span>
+              <div className={styles.textPaginationArrows}>
+                <button
+                  type="button"
+                  className={styles.textPaginationArrow}
+                  onClick={() => setTextPage((p) => Math.max(1, p - 1))}
+                  disabled={textPage <= 1}
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className={styles.textPaginationArrow}
+                  onClick={() => setTextPage((p) => Math.min(totalTextPages, p + 1))}
+                  disabled={textPage >= totalTextPages}
+                >
+                  ›
+                </button>
+              </div>
             </div>
+            {showActions && (
+              <div className={styles.actions}>
+                <button
+                  type="button"
+                  className={`${sharedStyles.universalButton} ${styles.actionButton}`}
+                  onClick={onBack}
+                >
+                  Назад
+                </button>
+                {catalogButton}
+              </div>
+            )}
           </div>
-          {showActions && (
-            <div className={styles.actions}>
-              <button
-                type="button"
-                className={`${sharedStyles.universalButton} ${styles.actionButton}`}
-                onClick={onBack}
-              >
-                Назад
-              </button>
-              {catalogButton}
-            </div>
-          )}
         </aside>
       </div>
       <div className={styles.rightPanel}>

@@ -26,6 +26,11 @@ export default function BranchPage() {
     }
   }, [branch?.id, branch?.type, branch?.sections?.length, location.state?.sectionIndex])
 
+  useEffect(() => {
+    if (!data || branch) return
+    navigate('/objects-branches', { replace: true })
+  }, [data, branch, navigate])
+
   const handleBack = () => navigate('/objects-branches')
 
   const handleSectionClick = (index) => {
@@ -61,7 +66,6 @@ export default function BranchPage() {
   }
 
   if (!branch) {
-    navigate('/objects-branches')
     return null
   }
 

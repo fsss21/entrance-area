@@ -132,6 +132,7 @@ const CollectionItem = () => {
         pageTitle: location.state?.returnTo ? catalogTitle : collection.headerTitle,
         returnTo: location.state?.returnTo,
         returnState: location.state?.returnState,
+        collectionItemSlideIndex: itemIdx,
       },
     })
   }

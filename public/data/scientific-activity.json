@@ -4,50 +4,46 @@
   "categories": [
     {
       "items": [
-        { "id": 1, "day": "15 марта", "dayOfWeek": "понедельник", "time": "10:00", "title": "Исследование 1" },
-        { "id": 2, "day": "14 июля", "dayOfWeek": "вторник", "time": "11:00", "title": "Исследование 2" },
-        { "id": 3, "day": "18 июня", "dayOfWeek": "среда", "time": "12:00", "title": "Исследование 3" },
-        { "id": 4, "day": "23 сентября", "dayOfWeek": "четверг", "time": "13:00", "title": "Исследование 4" },
-        { "id": 5, "day": "1 мая", "dayOfWeek": "пятница", "time": "14:00", "title": "Исследование 5" },
-        { "id": 6, "day": "8 марта", "dayOfWeek": "суббота", "time": "15:00", "title": "Исследование 6" },
-        { "id": 7, "day": "27 марта", "dayOfWeek": "воскресенье", "time": "16:00", "title": "Исследование 7" },
-        { "id": 8, "day": "13 марта", "dayOfWeek": "понедельник", "time": "17:00", "title": "Исследование 8" }
+        { "id": 1, "day": "15 марта", "dayOfWeek": "понедельник", "time": "10:00", "title": "Исследование 1", "image": "/data/images/scientific/issledovanie-01.jpg" },
+        { "id": 2, "day": "14 июля", "dayOfWeek": "вторник", "time": "11:00", "title": "Исследование 2", "image": "/data/images/scientific/issledovanie-02.jpg" },
+        { "id": 3, "day": "18 июня", "dayOfWeek": "среда", "time": "12:00", "title": "Исследование 3", "image": "/data/images/scientific/issledovanie-03.jpg" },
+        { "id": 4, "day": "23 сентября", "dayOfWeek": "четверг", "time": "13:00", "title": "Исследование 4", "image": "/data/images/scientific/issledovanie-04.jpg" },
+        { "id": 5, "day": "1 мая", "dayOfWeek": "пятница", "time": "14:00", "title": "Исследование 5", "image": "/data/images/scientific/issledovanie-05.jpg" },
+        { "id": 6, "day": "8 марта", "dayOfWeek": "суббота", "time": "15:00", "title": "Исследование 6", "image": "/data/images/scientific/issledovanie-06.jpg" },
+        { "id": 7, "day": "27 марта", "dayOfWeek": "воскресенье", "time": "16:00", "title": "Исследование 7", "image": "/data/images/scientific/issledovanie-07.jpg" },
+        { "id": 8, "day": "13 марта", "dayOfWeek": "понедельник", "time": "17:00", "title": "Исследование 8", "image": "/data/images/scientific/issledovanie-08.jpg" }
       ]
     },
     {
       "items": [
-        { "id": 1, "date": "10.04.2024", "title": "Публикация 1" },
-        { "id": 2, "date": "11.04.2024", "title": "Публикация 2" },
-        { "id": 3, "date": "12.04.2024", "title": "Публикация 3" },
-        { "id": 4, "date": "13.04.2024", "title": "Публикация 4" },
-        { "id": 5, "date": "14.04.2024", "title": "Публикация 5" },
-        { "id": 6, "date": "15.04.2024", "title": "Публикация 6" },
-        { "id": 7, "date": "16.04.2024", "title": "Публикация 7" },
-        { "id": 8, "date": "17.04.2024", "title": "Публикация 8" }
+        { "id": 1, "date": "10.04.2024", "title": "Публикация 1", "image": "/data/images/scientific/publikaciya-01.jpg" },
+        { "id": 2, "date": "11.04.2024", "title": "Публикация 2", "image": "/data/images/scientific/publikaciya-02.jpg" },
+        { "id": 3, "date": "12.04.2024", "title": "Публикация 3", "image": "/data/images/scientific/publikaciya-03.jpg" },
+        { "id": 4, "date": "13.04.2024", "title": "Публикация 4", "image": "/data/images/scientific/publikaciya-04.jpg" },
+        { "id": 5, "date": "14.04.2024", "title": "Публикация 5", "image": "/data/images/scientific/publikaciya-05.jpg" },
+        { "id": 6, "date": "15.04.2024", "title": "Публикация 6", "image": "/data/images/scientific/publikaciya-06.jpg" },
+        { "id": 7, "date": "16.04.2024", "title": "Публикация 7", "image": "/data/images/scientific/publikaciya-07.jpg" },
+        { "id": 8, "date": "17.04.2024", "title": "Публикация 8", "image": "/data/images/scientific/publikaciya-08.jpg" }
       ]
     },
     {
       "items": [
-        { "id": 1, "date": "20.05.2024", "title": "Конференция 1" },
-        { "id": 2, "date": "21.05.2024", "title": "Конференция 2" },
-        { "id": 3, "date": "22.05.2024", "title": "Конференция 3" },
-        { "id": 4, "date": "23.05.2024", "title": "Конференция 4" },
-        { "id": 5, "date": "24.05.2024", "title": "Конференция 5" },
-        { "id": 6, "date": "25.05.2024", "title": "Конференция 6" },
-        { "id": 7, "date": "26.05.2024", "title": "Конференция 7" },
-        { "id": 8, "date": "27.05.2024", "title": "Конференция 8" }
+        { "id": 1, "date": "20.05.2024", "title": "Конференция 1", "image": "/data/images/scientific/konferenciya-01.jpg" },
+        { "id": 2, "date": "21.05.2024", "title": "Конференция 2", "image": "/data/images/scientific/konferenciya-02.jpg" },
+        { "id": 3, "date": "22.05.2024", "title": "Конференция 3", "image": "/data/images/scientific/konferenciya-03.jpg" },
+        { "id": 4, "date": "23.05.2024", "title": "Конференция 4", "image": "/data/images/scientific/konferenciya-04.jpg" },
+        { "id": 5, "date": "24.05.2024", "title": "Конференция 5", "image": "/data/images/scientific/konferenciya-05.jpg" },
+        { "id": 6, "date": "25.05.2024", "title": "Конференция 6", "image": "/data/images/scientific/konferenciya-06.jpg" },
+        { "id": 7, "date": "26.05.2024", "title": "Конференция 7", "image": "/data/images/scientific/konferenciya-07.jpg" },
+        { "id": 8, "date": "27.05.2024", "title": "Конференция 8", "image": "/data/images/scientific/konferenciya-08.jpg" }
       ]
     },
     {
       "items": [
-        { "id": 1, "date": "01.06.2024", "title": "Реставрация 1" },
-        { "id": 2, "date": "02.06.2024", "title": "Реставрация 2" },
-        { "id": 3, "date": "03.06.2024", "title": "Реставрация 3" },
-        { "id": 4, "date": "04.06.2024", "title": "Реставрация 4" },
-        { "id": 5, "date": "05.06.2024", "title": "Реставрация 5" },
-        { "id": 6, "date": "06.06.2024", "title": "Реставрация 6" },
-        { "id": 7, "date": "07.06.2024", "title": "Реставрация 7" },
-        { "id": 8, "date": "08.06.2024", "title": "Реставрация 8" }
+        { "id": 1, "date": "01.06.2024", "title": "Реставрация 1", "image": "/images/actualInfo/restoration/1_restoration.jpg" },
+        { "id": 2, "date": "02.06.2024", "title": "Реставрация 2", "image": "/images/actualInfo/restoration/2_restoration.jpg" },
+        { "id": 3, "date": "03.06.2024", "title": "Реставрация 3", "image": "/images/actualInfo/restoration/3_restoration.jpg" },
+        { "id": 4, "date": "04.06.2024", "title": "Реставрация 4", "image": "/images/actualInfo/restoration/4_restoration.jpg" }
       ]
     }
   ]

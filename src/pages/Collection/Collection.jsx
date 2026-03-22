@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import backgroundCollectionImg from '../../assets/background_collection_img.png'
 import backgroundCollectionImg4k from '../../assets/background_collection_img-4k.png'
@@ -12,12 +12,21 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 const Collection = () => {
   const navigate = useNavigate()
+  const location = useLocation()
   const [imageSrc, setImageSrc] = useState(backgroundCollectionImg)
   const [slideIndex, setSlideIndex] = useState(0)
   const [data, setData] = useState(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
   const collections = data?.collections ?? []
+
+  useEffect(() => {
+    if (!collections.length) return
+    const saved = location.state?.carouselSlideIndex
+    if (typeof saved !== 'number' || Number.isNaN(saved)) return
+    const clamped = Math.max(0, Math.min(Math.floor(saved), collections.length - 1))
+    setSlideIndex(clamped)
+  }, [collections.length, location.state?.carouselSlideIndex])
 
   useEffect(() => {
     const is4K = window.innerWidth >= 2560 || window.innerHeight >= 1440
