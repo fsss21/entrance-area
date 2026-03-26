@@ -119,7 +119,8 @@
 .imageContainer {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 3 / 4;
+  min-height: clamp(460px, 62vh, 760px);
+  aspect-ratio: 4 / 3;
   flex-shrink: 0;
   overflow: hidden;
   background: #e8e8e8;
